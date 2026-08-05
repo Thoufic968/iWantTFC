@@ -15,7 +15,7 @@ pipeline {
     post {
 
         success {
-            build job: 'repo-b-pipeline',
+            build job: 'iWant',
                   wait: false
         }
 
