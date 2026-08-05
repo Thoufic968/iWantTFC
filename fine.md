@@ -1,1 +1,1 @@
-Hello, This is my first commnit
+Hello, This is my first commit
