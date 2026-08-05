@@ -16,7 +16,7 @@ pipeline {
 
         success {
             build job: 'iWant',
-                  wait: false
+                  wait: true
         }
 
     }
