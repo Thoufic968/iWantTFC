@@ -1,14 +1,23 @@
-Definition:
-Pipeline script from SCM
+pipeline {
 
-SCM:
-Git
+    agent any
 
-Repository URL:
-https://github.com/Thoufic968/iWantTFC.git
+    stages {
 
-Branch:
-*/main
+        stage('Build Repo A') {
+            steps {
+                echo "Building Repo A"
+            }
+        }
 
-Script Path:
-Jenkinsfile
+    }
+
+    post {
+
+        success {
+            build job: 'repo-b-pipeline',
+                  wait: false
+        }
+
+    }
+}
